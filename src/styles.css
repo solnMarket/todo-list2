@@ -1,5 +1,7 @@
 /* styles.css */
-body {
-  background-color: rebeccapurple;
+
+html, body {
+  height: 100%;
+  width: 100%;
 }
 

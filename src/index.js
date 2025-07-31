@@ -1,22 +1,19 @@
- 
-// index.js
+ // index.js
 import { AddProject } from "./AddProject.js";
+import { AddTodo } from "./AddTodo.js";
 import { CreateTodo } from "./CreateTodo.js";
+import "./styles.css"
 
 
-const projects = [
-    {
+
+    let def = {
         projectName: "default",
         todos: [
-            {title: "Go to the Gym", description: "Follow the routine the LLM gave you", dueDate: new Date(2025, 7, 30)},
-            {title: "Apply for a job", description: "The details were given to you by the fat dude", dueDate: new Date(2025, 7, 31)},
+            CreateTodo('Test','fart this ass', new Date(2025,7,20),'complete')
         ]
-    },
-]
+    }
 
-let newProject1 = AddProject('Math', {title: "Study Algebra", description: "start from the basics", dueDate: new Date(2025,7,30)})
-projects.push(newProject1)
- localStorage.setItem('projects', JSON.stringify(projects))
+     localStorage.setItem('default', JSON.stringify(def))
 
 
 
