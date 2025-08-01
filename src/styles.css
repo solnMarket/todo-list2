@@ -1,7 +1,36 @@
-/* styles.css */
 
-html, body {
+html, body, .appContainer {
   height: 100%;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+} 
+
+.appContainer{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: aliceblue;
 }
 
+.header, .footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.header{
+  font-size: 32px;
+}
+
+.main-content{
+  display: grid;
+  justify-items: center;
+  
+}
+
+.Project{
+  background-color: red;
+  width: 50%;
+  text-align: center;
+}
