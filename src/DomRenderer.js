@@ -21,24 +21,39 @@ export function DomRenderer(){
                 mainContent.appendChild(proj[i]) 
 
                 proj[i].textContent=key
+                
                 for(let j=0; j<value.length;j++){
                     let todo=[]
                     todo[j] = document.createElement('div')
                     todo[j].classList.add('todo')
                     proj[i].appendChild(todo[j])
-                    let title = document.createElement('div')
-                    title.textContent=value[i].title
+                    let title =[]
+                    let desc = []
+                    let dateInput = []
+                    let status = []
+                    title[j] = document.createElement('div')
+                    title[j].textContent=value[j].title
         
-                    let desc = document.createElement('div')
-                    desc.textContent=value[i].description
-                    let dateInput = document.createElement('input');
-                    dateInput.type = 'date'
-
-                    todo[j].appendChild(title)
-                    todo[j].appendChild(desc)
-                    todo[j].appendChild(dateInput)
+                    desc[j] = document.createElement('div')
+                    desc[j].textContent=value[j].description
+                    dateInput[j] = document.createElement('input');
+                    dateInput[j].type = 'date'
+                    dateInput[j].value = value[j].dueDate
+                    status[j] = document.createElement('input')
+                    status[j].type = 'checkbox'
+                    if(value[j].status=='Complete'){
+                        status[j].checked = true
+                    }else{
+                        status[j].checked = false
+                    }
+                    
+                    todo[j].appendChild(title[j])
+                    todo[j].appendChild(desc[j])
+                    todo[j].appendChild(dateInput[j])
+                    todo[j].appendChild(status[j])
 
                 }
+            
             }
                
         }
