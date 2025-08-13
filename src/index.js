@@ -6,19 +6,30 @@ import { DomRenderer } from "./DomRenderer.js";
 import { compareAsc, format } from "date-fns";
 import "./styles.css"
 import { CheckTodo } from "./CheckTodo.js";
+import { TaskCompleter } from "./TaskCompleter.js";
 
 
-    let newProj = AddProject('My Routine', [CreateTodo('Scroth', 'Follow the exercises that were taught by your P.T.', format(new Date(2025,8,3), "yyyy-MM-dd"), 'Complete')])
+    let newProj = AddProject('Default', [CreateTodo('Scroth', 'Follow the exercises that were taught by your P.T.', format(new Date(2025,8,3), "yyyy-MM-dd"), 'Complete'),CreateTodo('Coding','Study Web Dev via The Odin Project', format(new Date(2025,8,3), "yyyy-MM-dd"), 'Incomplete')])
     newProj.AddProject()
-    let newProj1 = AddProject('default', [CreateTodo('Help Cardo','Yesterday I accidentally hit him with a car, help him get better by treating it.', format(new Date(2025,8,3), "yyyy-MM-dd"),'Incomplete'),CreateTodo('Buy miggie some clothes', 'go to sm and get him something to wear to events', format(new Date(2025,8,3), "yyyy-MM-dd"), 'Incomplete')])
+
+    let newProj1 = AddProject('test list', [CreateTodo('testlist1', 'testlist1', format(new Date(2025,8,3), "yyyy-MM-dd"), 'Complete'),CreateTodo('testlist2','testlist2', format(new Date(2025,8,3), "yyyy-MM-dd"), 'Incomplete')])
     newProj1.AddProject()
      let dom = DomRenderer()
      dom.LoadProjects()
 
-    //  let check = CheckTodo('default', 'Buy miggie some clothes')
-    //  check.CheckTodo()
+    dom.ViewAddProjectFeature()
+    dom.ViewProjectsTodo()
+    let d = TaskCompleter()
+    d.TaskCompleter()
 
-    const checkbox = document.querySelectorAll('input[type="checkbox"]')
+
+
+
+
+
+
+
+
 
 
      
