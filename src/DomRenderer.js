@@ -1,5 +1,6 @@
 import { AddProject } from "./AddProject"
 import { TaskCompleter } from "./TaskCompleter"
+import { TodoModal } from "./TodoModal"
 
 export function DomRenderer(){
 
@@ -94,23 +95,26 @@ export function DomRenderer(){
                         if(key==projectElement.textContent){
                             let projectTitle = document.createElement('div')
                             let but = document.createElement('button')
-                            but.textContent='Add Todo'
+                            but.textContent='+'
+                            but.classList.add('buttonTodo')
                             projectTitle.textContent=key
+                            projectTitle.classList.add('ProjectTitleForAdding')
                             mainWrapper.appendChild(projectTitle)
                             projectTitle.appendChild(but)
                             for(let j=0; j<value.length; j++){
-                            let con = [], title = [], desc = [], dueDate = [], status = [];
+                            let con = [], remove = [], title = [], desc = [], dueDate = [], status = [];
                             con[j] = document.createElement('div')
                             title[j] = document.createElement('div')
                             desc[j] = document.createElement('div')
                             dueDate[j] = document.createElement('input')
                             status[j] = document.createElement('input')
+                            remove[j] = document.createElement('button')
 
                             dueDate[j].type = 'date'
                             status[j].type = 'checkbox'
                             status[j].classList.add('status')
                             
-
+                            remove[j].textContent="-"
                             title[j].textContent=value[j].title
                             desc[j].textContent=value[j].description
                             dueDate[j].value = value[j].dueDate
@@ -120,26 +124,25 @@ export function DomRenderer(){
                                 status[j].checked = false
                             }
                             mainWrapper.appendChild(con[j])
+                            con[j].appendChild(remove[j])
                             con[j].appendChild(title[j])
                             con[j].appendChild(desc[j])
                             con[j].appendChild(dueDate[j])
                             con[j].appendChild(status[j])
+                            let check = TaskCompleter()
+                            check.TaskCompleter()
 
                         }
+                        let modal = TodoModal()
+                            modal.TodoModal()
                         }
 
                     }
                     })
                 })
+
             })        
-        },
-
-        ViewAddTodo(){
-            document.addEventListener('DOMContentLoaded', function(){
-                
-            })
         }
-
 
     }
 }

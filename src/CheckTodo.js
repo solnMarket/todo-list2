@@ -2,8 +2,6 @@ export function CheckTodo(project,title){
     return {
         
         CheckTodo(){
-            
-
             let tmp = localStorage.getItem(project)
             tmp = JSON.parse(tmp)
             console.log(tmp)

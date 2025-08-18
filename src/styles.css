@@ -11,7 +11,7 @@ html, body, .appContainer {
 .appContainer{
   display: grid;
   grid-template-rows: 10% 1fr 8%;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: 10% 1fr;
   background-color: aliceblue;
 }
 
@@ -24,11 +24,14 @@ html, body, .appContainer {
 
 .sidebar{
   grid-row: 2/3;
-  background-color: #7D5BA6;
   font-size: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  background-color: #DDDDDD;
+
 }
 
 .sidebarWrapper{
@@ -41,7 +44,7 @@ html, body, .appContainer {
 }
 
 .AddProject{
-  border-radius: 10%;
+  border-radius: 50%;
   font-weight: bold;
   background-color: #DDDDDD;
   width: 1fr;
@@ -62,7 +65,7 @@ html, body, .appContainer {
   align-items: center;
   padding: 2%;
   grid-column: 1/3;
-  background-color: #DDDDDD;
+  background-color: #7D5BA6;
 }
 
 .header{
@@ -101,7 +104,41 @@ html, body, .appContainer {
   height: 80%;
   width: 80%;
   display: grid;
-  grid-template-rows: auto;
+  overflow: auto;
 }
 
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-bottom: #7D5BA6;
+}
 
+.modal1{
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalCon{
+  height: 50%;
+  width: 20%;
+  background-color: #DDDDDD;
+  border-radius: 6%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+.closeCon{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
