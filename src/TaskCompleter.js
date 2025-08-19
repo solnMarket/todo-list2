@@ -15,12 +15,13 @@ export function TaskCompleter(){
 
                     let parent = this.parentNode
                     console.log(parent)
-                    let title = parent.firstElementChild.textContent
-                    console.log(title)
+                    let title = parent.firstElementChild
+                    let d = title.nextElementSibling.textContent
+                    console.log(d)
                     let mainWrapper = document.querySelector('.mainWrapper')
                     let proj = mainWrapper.firstChild.firstChild.textContent
                     console.log(proj)
-                    let switchStatus = CheckTodo(proj,title)
+                    let switchStatus = CheckTodo(proj,d)
 
                     switchStatus.CheckTodo()
 

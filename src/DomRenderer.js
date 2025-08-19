@@ -1,4 +1,5 @@
 import { AddProject } from "./AddProject"
+import { RemoveTodo } from "./RemoveTodo"
 import { TaskCompleter } from "./TaskCompleter"
 import { TodoModal } from "./TodoModal"
 
@@ -113,6 +114,7 @@ export function DomRenderer(){
                             dueDate[j].type = 'date'
                             status[j].type = 'checkbox'
                             status[j].classList.add('status')
+                            remove[j].classList.add('removeBtn')
                             
                             remove[j].textContent="-"
                             title[j].textContent=value[j].title
@@ -129,12 +131,15 @@ export function DomRenderer(){
                             con[j].appendChild(desc[j])
                             con[j].appendChild(dueDate[j])
                             con[j].appendChild(status[j])
-                            let check = TaskCompleter()
-                            check.TaskCompleter()
+
+                            
+                            remove[j].addEventListener('click',RemoveTodo)
 
                         }
                         let modal = TodoModal()
                             modal.TodoModal()
+                        let check = TaskCompleter()
+                            check.TaskCompleter()
                         }
 
                     }
