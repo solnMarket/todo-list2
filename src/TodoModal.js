@@ -30,6 +30,7 @@ export function TodoModal(){
                     let statusSec = document.createElement('section')
                     let submitBtn = document.createElement('button')
 
+                    form.id = 'form'
                     title.type='text'
                     date.type='date'    
                     status.type='checkbox'

@@ -141,12 +141,14 @@ html, body, .appContainer {
 }
 
 .modalCon{
-  height: 50%;
-  width: 20%;
+  height: 55%;
+  width: 25%;
   background-color: #DDDDDD;
   border-radius: 6%;
   display: grid;
   grid-template-rows: 10% 90%;
+  padding: 2%;
+  text-align: center;
 }
 
 .closeCon{
@@ -163,10 +165,45 @@ button{
 }
 
 .ProjectTitleForAdding{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  
 }
 
-.buttonTodo{}
+#form{
+  display: grid;
+  text-align: center;
+}
+
+#form section{
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+#form button{
+  height: 50%;
+  width: 50%;
+  border-radius: 5%;
+    justify-self: center;
+  align-self: center;
+  
+}
+
+.buttonTodo{
+  margin: 12px;
+}
+
+input[type="date"] {
+  border: 2px solid #b399ff;
+  border-radius: 0.75rem;
+  background-color: #f9f7ff;
+  padding: 0.4rem 0.6rem;
+  font-family: inherit;
+  color: #333;
+}
+input[type="date"]:focus {
+  outline: none;
+  border-color: #9c6bff;
+  box-shadow: 0 0 6px #b399ff;
+}
+
+

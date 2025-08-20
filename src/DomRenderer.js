@@ -110,7 +110,8 @@ export function DomRenderer(){
                             dueDate[j] = document.createElement('input')
                             status[j] = document.createElement('input')
                             remove[j] = document.createElement('button')
-
+                            
+                            dueDate[j].classList.add('date-input')
                             dueDate[j].type = 'date'
                             status[j].type = 'checkbox'
                             status[j].classList.add('status')
